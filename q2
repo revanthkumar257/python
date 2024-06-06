@@ -1,0 +1,13 @@
+10.2. String Manipulation:
+Create a function reverse_words(text) that takes a string as input.
+The function should reverse the order of words in the string while maintaining the order of characters within each word. -Return the modified string.
+Hint: Use string methods like split and join to manipulate the words.
+
+def reverse_words(text):  
+    words = text.split()
+    reversed_words = words[::-1] 
+    reversed_text = ' '.join(reversed_words)
+    return reversed_text
+text = input("Enter a sentence: ")
+reversed_text = reverse_words(text)
+print(reversed_text)
