@@ -1,0 +1,16 @@
+10.4. Filtering with Lambda:
+Create a list of product names (strings).
+Define a function filter_short_names(names, max_length) that takes the list of names and a maximum length as arguments.
+Use filter with a lambda function to return a new list containing only names shorter than the provided max_length.
+Hint: The lambda function should check the length of each name and return True if it's less than max_length
+
+def filter_short_names(names, max_length):
+    return list(filter(lambda name: len(name) < max_length, names))
+
+product_names_input = input("Enter product names separated by comma: ")
+product_names = product_names_input.split(',')
+
+max_length_input = int(input("Enter maximum length for product names: "))
+
+short_names = filter_short_names(product_names, max_length_input)
+print("Product names shorter than the max length:", short_names)
