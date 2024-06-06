@@ -1,0 +1,22 @@
+10.3. List Statistics:
+Create a function analyze_list(numbers) that takes a list of numbers as input.
+The function should calculate and return the following in a dictionary:
+Minimum value in the list
+Maximum value in the list
+Average value in the list (use sum and division)
+Use a dictionary to store and return the calculated statistics.
+Hint: Utilize built-in functions like min, max, and sum for calculations.
+
+def analyze_list(numbers):
+    statistics = {
+        'Minimum': min(numbers),
+        'Maximum': max(numbers),
+        'Average': sum(numbers) / len(numbers)
+    }
+    return statistics
+
+user_input = input("Enter numbers separated by space: ")
+numbers_list = [float(number) for number in user_input.split()]
+
+result = analyze_list(numbers_list)
+print(result)
